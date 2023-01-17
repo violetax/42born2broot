@@ -1,0 +1,11 @@
+:insert 
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int	main(__attribute__ ((__unused__)) int argc, __attribute__ ((__unused__)) char **argv)
+{
+
+	return (0);
+}
+.

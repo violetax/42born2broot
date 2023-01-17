@@ -1,0 +1,3 @@
+function opte() {
+	vim $0
+}

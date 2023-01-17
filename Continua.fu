@@ -1,0 +1,6 @@
+function continua() {
+    echo -e '\033[38;5;45m'
+    read -p " Pulsa ENTER para continuar " variableinutilsoloesunmecanismoparaforzarunwaitforinput
+    echo -e '\033[38;5;45m'
+    clear
+}

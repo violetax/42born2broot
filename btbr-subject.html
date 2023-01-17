@@ -1,0 +1,340 @@
+<!doctype html>
+
+<html lang="es" xml:lang="es" xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <link rel="stylesheet" href="" />
+  <title>B2BR</title>
+<style>
+	html {
+	}
+	body {
+		background-color: #FEF9E7;
+	}
+	code {
+		background-color: #EBEDEF; 
+		tab-size: 4;
+		display: block;
+		white-space: pre-wrap;
+	}
+</style>
+</head>
+
+<body>
+<h3><span style="color:#808080; font-size:44px; font-weight:bold">Born2beRoot</span></h3>
+
+<section class="uno">
+<div class="container">
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Este proyecto consiste en configurar tu primer servidor siguiendo una serie de normas concretas.</span></h3>
+<!-- 		<div class="definiciones teoria" style="white-space: pre"> -->
+	<span style="color: #008000"; font-size:14px; font-weight:bold>SERVIDOR : </span> bien parte de un hardware, bien un programa informatico, que sirve una funcionalidad a otros bien aparatos, bien programas, llamados clientes.
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Como consiste en configurar un servidor, debes instalar el numero minimo de servicios</span></h3>
+<p>En relacion a los apartados del subject, esto tiene significado para escoger el tamanio de las particiones. Porque para instalar servicios, es necesario calcular cuanto espacio de disco van a necesitar para instalarse y funcionar.</p>
+<!-- 		<div class="tarea titulo item" style="white-space: pre"> -->
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Deberas elegir como sistema operativo la ultima version estable de Debian (no testing/unstable), o la ultima version estable de CentOS.</span></h3>
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>AppArmor en Debian debe ejecutarse al iniciar tambien.</span></h3>
+<!-- blankline --> 
+<!-- 	<div class="tarea titulo item" style="white-space: pre">  -->
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debes crear al menos 2 particiones cifradas usando LVM.</span></h3>
+
+<!-- 		<div class="definiciones teoria" style="white-space: pre"> -->
+<p>Instalar en el hardware virtual, una version estable de un sistema operativo con algun tipo de arquitectura de seguridad integrada : Debian o Centos (ahora Debian o Rocky)</p>
+<p>SELinux debe ejecutarse al iniciar y su configuracion debe adaptarse a las necesidades del proyecto. AppArmor en Debian debe ejecutarse al inciar tambien</p>
+<p>Este documento se elabora para DEBIAN, y AppArmor viene instalado y habilitado por defecto.</p>
+<p>Los pasos de la instalacion grafica en Debian son:</p>
+<div>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Seleciona idioma</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Seleciona ubicacion </span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Configura teclado </span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Configura la red</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Nombre de maquina : el subject: pide que sea tu login de 42</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Nombre de dominio -- sin instrucciones del subject, puede ir vacio</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Configurar usuarios y contrasenias -- lo recomendable para la instalacion, es usar pseudo-contrasenias, es decir, algo facil de escribir, y se despues se cambia a una contrasenia realista durante el desarrollo del subject</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Contrasenia de superusuario</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Nombre completo de usuario (aqui se crea una <b>cuenta de usuario regular</b>, esto es, con permisos regulares. Se pide primero un nombre que va a estar disponible como informacion semi-publica (se sugiere usar el nombre real)</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Nombre de usuario para la cuenta. Poner nuestor login de 42 </span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Contrasenia de usuario </span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Configurar el reloj</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Zona horaria</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- <b>PARTICIONADO DE DISCOS</b></span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Se instala el sistema; y se ofrece integrar mas medios (para el subject, NO)</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Seleccionar pais para buscar un mirror de Debian -> Espania -> deb.debian.org</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Se ofrece buscar proxy: para el subject, NO; y participar en encuesta de popularidad, NO.</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Escoger paquetes de instalacion. Para el subject:</span></p>
+	<p><span style="color: #FF00FF; font-size:14px; font-weight:bold">- SSH</span></p>
+	<p><span style="color: #FF00FF; font-size:14px; font-weight:bold">- Utilidades estandard</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- Si instalar GRUB (en la <b>/dev/sda</b>)</span></p>
+	<p><span style="color: #800000; font-size:14px; font-weight:bold">- HECHO!!!</span></p>
+</div>
+		<b>PARTICIONADO DE DISCOS, ENCRIPTADO Y LVM</b>
+<p>Instruccion : "crear al menos 2 particiones cifradas usando LVM" </p>
+<p>La particion es la habilitacion de un disco o parte de un disco para un uso concreto. En este caso, el uso concreto es funcionar como sistema operativo.</p>
+<p>La instalacion de un SO reconoce un disco y su espacio disponible. En el caso de VirtualBox, el disco es el archivo .vdi, que representa un disco con el 100% del espacio disponible. La instalacion requiere al menos una particion, y el subject pide al menos 2.</p>
+<p>El significado de "cifradas usando LVM" es: seleccionar la opcion correcta del menu general del apartado de particioneas, y hay dos opciones correctas: "Guiada - usando disco entero y LVM encriptado" o "Manual"</p>
+<p>-- La manual no se considera en este documento</p>
+<p>-- La guiada dice usar el espacio completo, y por algun motivo es siempre un poquito mayor que lo que se le asigna en el apartado de crear un disco duro virtual</p>
+<p>Esta opcion ofrece en primer lugar DOS ESQUEMAS DE PARTICIONADO:</p>
+<p>1.	Crear una unica particion (se monta en /, root; / es un punto de montaje necesario para que funcione el SO)</p>
+<p>2.	Crear una particion /home separada  (la que no es /home, se monta en root)</p>
+<p>Es decir: crear una particion, o dos. Y mas adelante, otras DOS OPCIONES PARA EL ESQUEMA DE PARTICIONADO:</p>
+<p>A.	Usar el 100% del disco</p>
+<p>B.	Usar menos espacio</p>
+<p>La opcion mas rapida para hacer el subject, y que considera esta guia, es: Crear una particion /home separada, usando menos que el 100% del espacio (opcion 2.B, en la nomenclatura de esta guia). Motivos explicados:</p>
+<p>I.	"crear al menos 2 particiones cifradas usando LVM" : LVM es un mecanismo de particionado integrado en el kernel de Linux (solo disponible por defecto en la instalacion de algunas distribuciones, como Debian), que deja el disco preparado para extender el tamanio de sus particiones en el futuro.</p>
+<p>Con LVM, las particiones son de tipo logico, y "contienen" uno o mas grupos logicos, que a su vez se pueden dividir de manera logica en llamados volumenes.</p>
+<p>La instalacion guiada por defecto crea un unico grupo, que por defecto el volumen logico con el punto de montaje imprescindible, en /root. Y ademas ofrece crear otro volumen montado en /home. Con esta opcion, se cumple el "al menos 2 particiones cifradas usando LVM" (tambien por defecto se crea una particion primaria con el otro punto de montaje imprescindible, en /boot, pero esta no suma para lo que pide el subject).</p>
+<p>II.	Lo de usar menos espacio que el 100%, es necesario para hacer mas adelante el bonus. Y en general, es lo coherente para aprovechar los beneficios de LVM. <b> Al estar encriptado, hay que seguir una serie de pasos... Es uno de los apartados del bonus, que aqui no esta hecho </b> </p>
+<p>La instalacion guiada te indica el espacio absolutamente minimo requerido, pero hace falta coger algo mas de espacio para instalar cualquier servicio extra, como por ejemplo, ufw.</p>
+<p>(https://linuxbsdos.com/2008/09/24/the-benefits-of-using-linux-logical-volume-manager/)</p>
+	<code> 
+<i>lsblk # comando que muestra las particiones</i><br>
+NAME							MAJ:MIN 	RM	SIZE    RO TYPE	MOUNTPOINT 	<br>
+sda								 8:0		0	8G		0 	disk			<br>
+|-sda1							 8:1		0	487M	0 	part	/boot 	<br>
+|-sda2							 8:2		0	1K		0 	part 			<br>
+`-sda5							 8:5		0	7.5G	0 	part 			<br>
+	`-sda5_crypt				 254:0		0	7.5G	0 	crypt 				<br>
+		|-${MILOGIN42}--vg-root  	 254:1  	0  	1.5G  	0 	lvm  	 /			<br>
+		|-${MILOGIN42}--vg-swap_1	 254:2  	0  	976M  	0 	lvm  	 [SWAP]		<br>
+		`-${MILOGIN42}--vg-home  	 254:3  	0  	1.2G  	0 	lvm  	 /home		<br>
+sr0 																		<br>
+
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+		<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debes saber, por lo tanto, las diferencias entre aptitude y apt, o que son SELinux y AppArmor.</span></h3>
+	<code> 
+<i>w3m https://www.redhat.com<b>/sysadmin/apparmor</b>-selinux-isolation</i><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>El servicio SSH se ejecutar en el puerto 4242 solo.</span></h3>
+	<p>1.	 EDITAR el archivo de configuracion de ssh para utiliar puerto 4242</p>
+	<code> 
+<i>sed -i 's/#Port 22/Port 4242/' <b>/etc/ssh/sshd_config</b></i><br>
+<i>sed -ne '/^Port 4242/p' <b>/etc/ssh/sshd_config</b> # para verlo</i><br>
+	</code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Por seguridad, no debe ser posible conectarte a travs de SSH como root.</span></h3>
+<p>Esa es la configuracion por defecto, al menos para la intalacion de debian-mac-11.5.0-amd64-netinst.iso.</p>
+<p>Por comodidad, y confiando en la seguridad de red de 42, para hacer este subject la script btbr-comienzo.sh si lo habilita , con dos acciones :</p>
+	<code> 
+<i>sed -i 's/^\#\(PermitRootLogin\).*/\1 yes/' <b>/etc/ssh/sshd_config</b></i><br>
+<i>sed -i 's/^UsePAM yes/#&/' <b>/etc/ssh/sshd_config</b></i><br>
+	</code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>El uso de SSH ser comprobado durante la defensa creando un nuevo usuario.</span></h3>
+	<code>
+<i>adduser unuser</i><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debes configurar tu sistema operativo con el firewall UFW, dejando solamente el puerto 4242 abierto.</span></h3>
+<p>Pasos:</p>
+	 <b>1. Instalar el paquete</b> 
+	 <code> 
+		 <i>apt install ufw</i><br>
+	 </code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Tu firewal debe estar activo cuando ejecutes la maquina virtual.</span></h3>
+	 <b>2. Habilitar el servicio</b> <p> Esto interrumpe la conexion ssh de terminales pts, salvo la que ejecuto el comando (a pts is a pseudo terminal slave : an xterm or an ssh connection)
+	 <p> Para volver a conectarse con ssh, hay que definir una regla de permitir acceso. En concreto par Bortn2BeRoot, abrir ese puerto 4242, que se definio en <b>/etc/ssh/sshd_config</b> </p>
+	 <code> 
+<i>ufw enable</i><br>
+<i>ufw allow 4242</i><br>
+<i>systemctl restart ssh</i><br>
+	 </code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>El hostname de tu maquina virtual debe ser tu login terminado en 42 (por ejemplo, wil42).</span></h3>
+	<p>El hostname se muestra y manipula con el comando hostnamectl </p> 
+	<p> Tambien hay una copia del nombre del nombre del hostname en el archivo <b>/etc/hostname</b> </p> 
+	<p> Si se cambia de forma manual este archivo, el sistema pasa a reconocer dos hostnames (buscar informacion sobre static y transient hostnames).</p>
+	<code> 
+<i>hostnamectl | grep hostname</i><br>
+	</code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Deberas modificar este hostname durante tu evaluacion.</span></h3>
+	<code> 
+<i>hostnamectl set-hostname ${hostnameEvaluacion}</i><br>
+<i>hostnamectl | grep hostname</i><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Ademas del usuario root, un usuario con tu login como nombre debe existir.</span></h3>
+	<code> 
+		<i>less <b>/etc/passwd</b> | grep "1000:1000" | awk -F: '{print $1}'</i><br>
+	</code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Este usuario debe pertenecer a los grupos user42 y sudo.</span></h3>
+<p>Primero hay que crear el grupo users42 e instalar sudo; y depues aniadir el usuario a los dos grupos.</p>
+<p>Se crea un grupo con addgroup o con groupadd</p>
+	<code> 
+<i>addgroup user42</i><br>
+<i>apt install sudo</i><br>
+<i>usermod -a -G user42 ${MILOGIN42} </i><br>
+<i>usermod -a -G sudo ${MILOGIN42} </i><br>
+<i>less <b>/etc/group</b> | grep "\(sudo\)\|\(${MILOGIN42}\)" </i><br>
+	</code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Durante la defensa, debes crear un usuario y asignarselo a un grupo.</span></h3>
+<p>Los principales comandos para crear ususarios y grupos son : addgroup, adduser, useradd, groupadd y usermod.</p>
+<p>El manual recomienda addgroup y adduser para tareas de administracion de sistemas.</p>
+	<code> 
+<i>useradd unusuario</i><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debes implementar una politica de contrasenias fuerte.</span></h3>
+<p>Para informacion relativa a la seguridad en Debian ver, entre otros: https://www.debian.org<b>/doc/manuals/securing</b>-debian-manual/ch04s11.en.html</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Para configurar una politica de contrasenias fuerte, debes cumplir los siguientes requisitos: para usuarios y root</span></h3>
+	<p>La politica de contrasenias se personaliza editando archivos de configuracion basicos.</p> 
+	<p> Para lo que pide el subject:</p>
+	<p>-	<b>/etc/login.defs</b></p>
+	<p>-	<b>/etc/pam.conf</b>, o archivos incluidos en los directorio <b>/etc/pam.d</b> y <b>/etc/security</b></p>
+
+<p>I) <b>/etc/login.defs</b></p>
+
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Tu contrasenia debe expirar cada 30 dias.</span></h3>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>El numero minimo de dias permitido antes de modificar una contrasenia deber ser 2 .</span></h3>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>El usuario debe recibir un mensaje de aviso 7 dias antes de que su contrasenia expire.</span></h3>
+
+	<code> 
+		<i>vim <b>/etc/login.defs</b></i><br>
+		<p># Editar archivo para que quede como se muestra: </p>
+		<i># Password aging controls:</i><br>
+		<i>#</i><br>
+		<i>#	PASS_MAX_DAYS	Maximum number of days a password may be used.</i><br>
+		<i>#	PASS_MIN_DAYS	Minimum number of days allowed between password changes.</i><br>
+		<i>#	PASS_WARN_AGE	Number of days warning given before a password expires.</i><br>
+		<i>#</i><br>
+<i>PASS_MAX_DAYS	30</i><br>
+<i>PASS_MIN_DAYS	2</i><br>
+<i>PASS_WARN_AGE	7</i><br>
+	#
+	</code>
+<p>El sistema aplica los cambios en los archivos de pam por defecto a todos los usuarios regulares</p>
+<p> Pero los cambios de politica de <b>/etc/login.defs</b> hay que <i>forzarlos</i> en los los usuarios creados con anterioridad (como root y ${MILOGIN42})</p>
+<p> Para forzar esos cambios, hay que usar el comando: <i>chage</i></p>
+<p> Es interactivo, y pide 6 valores, de los que 3 son los del subject</p>
+	<code> 
+		<i>chage root</i><br>
+		<i>chage ${MILOGIN42}</i><br>
+		<i>chage -l $user # para verlo </i>
+	</code>
+
+<p>II) Librerias PAM</p>
+
+<p>Instalar : </p>
+	<code>
+		<i>apt install libpam-pwquality</i><br>
+	</code>
+
+<p>El modulo de PAM libpam-pwquality tiene variables personalizables, que cubren las instrucciones del subject. </p>
+<p>Se puede asignarles el valor, bien con una linea del archivo <b>/etc/pam.d/common-password</b>, o a traves del archivo <b>/etc/security/pwquality.conf</b>, y son : </p>
+
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Tu contrasenia debe tener como minimo 10 caracteres de longitud.</span></h3>
+<p>minlen=10</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debe contener una mayuscula y un numero.</span></h3>
+<p>ucredit=-1</p>
+<p>dcredit=-1</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Por cierto, no puede tener mas de 3 veces consecutivas el mismo caracter.</span></h3>
+<p>maxrepeat=3</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>La contrasenia no puede contener el nombre del usuario.</span></h3>
+<p>reject_username</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>La siguiente regla no se aplica a la contrasenia para root: La contrasenia debe tener al menos 7 caracteres que no sean parte de la antigua contrasenia.</span></h3>
+<p>difok=7 # no consigo excluir esto para root</p>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Evidentemente, tu contrasenia para root debe seguir esta politica. </span></h3>
+<p>enforce_for_root</p> 
+<code>
+<p># TODO JUNTO en  <b>/etc/pam.d/common-password</b> : </p>
+<i>sed -i "s/^password.*requisite.*pam_pwquality.so.*retry=3/#&/" /etc/pam.d/common-password </i><b> # primero comentar-fuera esto </b>, y meter lo siguiente:<br>
+<i> sed -i "/^#password.*requisite.*pam_pwquality.so.*retry=3/i\ <br>
+password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root
+" /etc/pam.d/common-password </i><br>
+	</code>
+
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Despues de preparar tus archivos de configuracion, debes cambiar la contrasenia de todias las cuentas presentes en la maquina virtual, root incluida.</span></h3>
+<p>Es buena idea dejar esto hasta justo antes de entregar</p>
+	<code> 
+		<i>passwd</i><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Debes instalar y configurar sudo siguiendo reglas estrictas.</span></h3>
+	<code>
+		<p> sudo se ha instalado antes : </p>
+		<i>dpkg -l | grep sudo</i><br>
+	</code>
+<p>La configuracion se puede desarrollar bien en el archivo <b>/etc/sudoers</b>, o preferiblemente en archivos incluidos en el directorio <b>/etc/sudoers.d</b></p>
+<p>Se recomienda crear archivos en <b>/etc/sudoers.d</b>, al menos porque permite mejor organizacion</p>
+<p>Por ejemplo, todias las instrucciones del subject pueden forzarse con respectivas lineas en <b>/etc/sudoers.d</b>, o con respectivos archivos en <b>/etc/sudoers.d</b> -- y posteriormente los archivos se gestionan mejor, que las lineas de un archivo unico.</p>
+	<code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Para configurar una contrasenia fuerte para tu grupo sudo, debes cumplir con los siguientes requisitos:</span></h3>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold> --  Autenticarte con sudo debe estar limitado a tres intentos en el caso de introducir una contrasenia incorrecta.</span></h3>
+	<code> 
+		<b>echo '<i>Defaults passwd_tries=3</i>'</b> > /etc/sudoers.d/r1_passwd_tries </b><br>
+	</code>
+
+	<code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold> --  Un mensaje personalizado de tu eleccion debe mostrarse en caso de que la contrasenia introducida sea incorrecta cuando se utilice sudo.</span></h3>
+<i>echo '<b>Defaults	badpass_message="Prueba otra vez/Try again/Noch mal/Berriro/Mais non!!"</b>' > /etc/sudoers.d/r2_badpass_message</i><br>
+	</code>
+	<code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold> --  Para cada comando ejecutado con sudo, tanto el input como el output deben quedar archivados en el directorio <b>/var/log/sudo/</b>.</span></h3>
+	<b>echo -n <i>'Defaults logfile="/var/log/sudo/sudo.log"</i></b><br>
+	<i><b>Defaults log_input,log_output</b></i><br>
+	<b><i>Defaults iolog_dir="/var/log/sudo"'</i> > /etc/sudoers.d/r3_sudo_logfile </b><br>
+	</code>
+
+	<code>
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold> --  El modo TTY debe estar activado por razones de seguridad.</span></h3>
+	<b>echo '<i>Defaults requiretty</i>' > /etc/sudoers.d/r4_requireTTY </b> <br>
+	</code>
+
+	<code> 
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold> --  Por seguridad, los directorios utilizables por sudo deben estar restringidos.</span></h3>
+	<p>Por ejemplo, el siguiente secure_path es el ejemplo del subject, con el directorio compartido aniadido:</p>
+	<b>echo '<i>Defaults secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin:/mnt/virtualshare"</i>' > /etc/sudoers.d/r5_securepath</b><br>
+	</code>
+<!-- blankline --> 
+<!-- <div class="tarea titulo item" style="white-space: pre">  -->
+	<h3><span style="color: #0000FF"; font-size:14px; font-weight:bold>Finalmente, debes crear un script sencillo llamado monitoring.sh.</span></h3>
+	<code>
+			<p> # Hacerlo logueado como root, con el comando: </p>
+			<i> crontab -e  </i> 
+	</code>
+	<b> Las instrucciones del subject son las siguientes: </b>
+	<p>Debe estar desarrollado en bash.</p>
+	<p>Cuando el servidor inicie, el script mostrar cierta informacion (listada debajo) en todos los terminales cada 10 minutos (chale un vistazo a wall).</p>
+	<p>El baner de wall es opcional.</p>
+	<p>Ningn error debe ser visible.</p>
+	<p>Tu script debe siempre mostrar la siguiente informacion:</p>
+	<p> --  La arquitectura de tu sistema operativo y su version de kernel.</p>
+	<p> --  El numero de nucleos fsicos.</p>
+	<p> --  El numero de nucleos virtuales.</p>
+	<p> --  La memoria RAM disponible actualmente en tu servidor y su porcentaje de uso.</p>
+	<p> --  La memoria disponible actualmente en tu servidor y su utilizacion como un porcentaje.</p>
+	<p> --  El porcentaje actual de uso de tus nucleos.</p>
+	<p> --  La fecha y hora del ltimo reinicio.</p>
+	<p> --  Si LVM est activo o no.</p>
+	<p> --  El numero de conexiones activas.</p>
+	<p> --  El numero de usuarios del servidor.</p>
+	<p> --  La direccion IPv4 de tu servidor y su MAC (Media Access Control)</p>
+	<p> --  El numero de comandos ejecutados con sudo.</p>
+	<p>Durante la defensa, te preguntan como funciona este script.</p>
+	<p>Deberas interrumpirlo sin modificarlo <b>(para esto, usar <i>crontab -e</i> otra vez, y comentar el trabajo)</b></p>
+
+<div class="entrega evaluacion" style="white-space: pre">
+	<h2> Entrega y evaluacion </h2>
+<h3><span style="color: #0000FF";>Solo debes enviar un archivo signature.txt en la raiz de tu repositorio Git.</span></h3>
+<h3><span style="color: #0000FF";>Debes pegar en la firma de tu disco virtual.</span></h3>
+<h3><span style="color: #0000FF";>Para obtener esta firma, debes primero abrir la ruta por defecto de instalacion (es decir, donde tus VMs se guardan).</span></h3>
+<h3><span style="color: #0000FF";> -- /sgoinfre/goinfre/Perso/${milogin42}/${mi_ruta_a_las_MV}</span></h3>
+<h3><span style="color: #0000FF";>Recupera entonces la firma del archivo ".vdi" (o ".qcow2" para usuarios de UTM) de tu maquina virtual en formato sha1.</span></h3>
+<h3><span style="color: #0000FF";>Ejemplos: </span></h3>
+<h3><span style="color: #0000FF";> --  Linux: sha1sum mimv_serv.vdi</span></h3>
+<h3><span style="color: #0000FF";> --  MacOS: shasum mimv_serv.vdi</span></h3>
+<h3><span style="color: #0000FF";>Este es un ejemplo del tipo de resultado que obtendras:</span></h3>
+<p>6e657c4619944be17df3c31faa030c25e43e40af</p>
+<h3><span style="color: #0000FF";>Por favor, ten en cuenta que la firma de tu VM puede verse alterada tras tu primera evaluacion.</span></h3>
+<h3><span style="color: #0000FF";>Para solucionar este problema, puedes duplicar tus maquinas virtuales o usar save state.</span></h3>
+<h3><span style="color: #0000FF";>Durante la defensa, el contenido del archivo signature.txt se comparar con la firma de tu maquina virtual.</span></h3>
+  </body>
+</div> 
+</html>

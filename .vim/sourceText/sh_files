@@ -1,0 +1,34 @@
+:insert
+#!/bin/bash
+
+#function Quehace() {
+	#return 25
+#}
+while getopts ":eh" o; do
+	case ${o} in
+		e)
+			vim $0
+			exit
+			;;
+		h)
+			Quehace 2>/dev/null
+			[[ "$?" == 25  ]] || echo "No esta definido Quehace"
+			exit
+			;;
+	esac
+    
+done
+shift $((OPTIND-1))
+
+exit_script() {
+	# esto se ejecuta en caso de exit distinto de 0 # NO ES 100% FIABLE...
+	# poner aqui lo que quieres que se ejecute
+    trap - SIGINT SIGTERM # 
+    kill -- -$$ # Sends SIGTERM to child/sub processes # A VECES, LA SYNTAXIS AQUi ES SIN EL GUIoN QUE PRECEDE AL DOBLE DOLAR
+}
+
+trap exit_script SIGINT SIGTERM
+
+### MAIN
+
+.
