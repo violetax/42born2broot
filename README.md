@@ -131,9 +131,9 @@
   <div align="left" id="comousaresto">
    <p>La idea es guardar las script incluidas en un directorio compartido. A partir de ahí, puede ejecutarse en primer lugar <b>btbr-comienzo.sh -h<b> </p>
    <p>Esa opción <b>-h</b> utiliza un builtin de bash, que permite que las scripts tomen opciones. Y en esta script, la opción h hace referencia a "help", y se limita a printar información... Todas las script incluidas llevan dos opciones: la <b>-h</b> para ver ayuda, y la <b>-e</b> para editarla. Con la optión -e se ejecuta ``` vim $0 ```, es decir, que se abre la script desde cualquier directorio en que se ejecute.  </p>
-  <p>Y "plug and play".</p>
+  <p>Y "plug and play".</p><br>
   <strong>btbr-comienzo.sh instala: vim, w3m y acl</strong> 
-  <p><b>w3m</b> es un navegador en texto, con el que puede abrirse el archivo <b>[btbr-subject.html](https://github.com/violetax/42born2broot/blob/main/btbr-subject.html)</b>, que contiene el subject oficial (el que era en diciembre de 2022), frase a frase, con cada frase comentada con información y comandos. <b>Pendiente, mejorarlo y ampliarlo</b></p>.
+  <p><b>w3m</b> es un navegador en texto, con el que puede abrirse el archivo <b>btbr-subject.html</b> (https://github.com/violetax/42born2broot/blob/main/btbr-subject.html)</b>, que contiene el subject oficial (el que era en diciembre de 2022), frase a frase, con cada frase comentada con información y comandos. <b>Pendiente, mejorarlo y ampliarlo</b></p>.
   <p>Se agradecen todas las ampliaciones de información que sean una mejora. En particular compartir cómo se hace el apartado de particiones de los bonus, sin el truco de la partición manual durante la instalación.</p>
   </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -147,7 +147,7 @@ Project Link: [https://github.com/violetax/42born2broot](https://github.com/viol
 <!-- ACKNOWLEDGMENTS -->
 ## Reconocimientos
 
-<!-- * [Guia anterior para born2broot, desde Urduliz 42](https://docs.google.com/document/d/1P3aTAu0zp-_aRrH31AdM6_k6_tWx6j97MF007J6LtsI/edit?usp=sharing) -->
+* [Guia anterior para born2broot, desde Urduliz 42](https://docs.google.com/document/d/1P3aTAu0zp-_aRrH31AdM6_k6_tWx6j97MF007J6LtsI/edit?usp=sharing)
 * [Plantilla de este Readme](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
