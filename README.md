@@ -16,7 +16,6 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-[![Contributors][contributors-shield]][https://docs.google.com/document/d/1P3aTAu0zp-_aRrH31AdM6_k6_tWx6j97MF007J6LtsI/edit?usp=sharing]
 
 <!-- PROJECT LOGO -->
 <br />
