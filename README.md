@@ -75,7 +75,7 @@
 		</ul>
 	</div>
 	<div align="left">
-		<h4><a href="#subjhtml">El subject, en formato html</a></h4>
+		<h4> El subject, en formato html, btbr-subject.html (https://github.com/violetax/42born2broot/blob/main/btbr-subject.html) </h4>
 	</div>
 	</ul>
 </details>
