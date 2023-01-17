@@ -109,6 +109,7 @@
 <p>Un usuario con privilegios de administrador tiene que montar el directorio. El comando par ello <b>mount</b> tiene un parámetro concreto para este caso:</p>
 </div>
 </div>
+
 * mount -t vboxsf
   ```sh
   mount -t vboxsf nombreDlDirectorio /ruta_en_el_guest
