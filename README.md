@@ -107,6 +107,8 @@
 <div align="left">
 <h3>En un guest tipo Debian</h3>
 <p>Un usuario con privilegios de administrador tiene que montar el directorio. El comando par ello <b>mount</b> tiene un parámetro concreto para este caso:</p>
+</div>
+</div>
 * mount -t vboxsf
   ```sh
   mount -t vboxsf nombreDlDirectorio /ruta_en_el_guest
@@ -116,13 +118,12 @@
   mount -t vboxsf nombreenHost /mnt/nombreenGuest
   ```
 <p>Estas líneas, una logueado en la máquina como root,  pueden añadirse a un archivo de configuración de bash (por ejemplo, el <i>/etc/profile</i>) para que se ejecuten de manera automática al encenderse la máquina virtual. Conviene además, añadir en la configuración una línea para asegurarse de que sí existe el directorio donde se quiere hacer el montaje.</p>
+
 * si no existe, crearlo
   ```sh
   [[ ! -d /mnt/nombreenGuest ]] && mkdir /mnt/nombreenGuest
   ```
 <p>En caso de acceder a una máquina desde <b>ssh</b>, ese acceso es automático o no: está vinculado a la configuración de ssh (relativo a los privilegios de administración del usuario que se conecta por ssh).</p>
-</div>
-</div>
 
 ## CÓMO ENTENDER Y USAR LOS ARCHIVOS DE ESTE REPOSITORIO
 
@@ -145,7 +146,7 @@ Project Link: [https://github.com/violetax/42born2broot](https://github.com/viol
 <!-- ACKNOWLEDGMENTS -->
 ## Reconocimientos
 
-* [Guia anterior para born2broot, desde Urduliz 42](https://docs.google.com/document/d/1P3aTAu0zp-_aRrH31AdM6_k6_tWx6j97MF007J6LtsI/edit?usp=sharing)
+<!-- * [Guia anterior para born2broot, desde Urduliz 42](https://docs.google.com/document/d/1P3aTAu0zp-_aRrH31AdM6_k6_tWx6j97MF007J6LtsI/edit?usp=sharing) -->
 * [Plantilla de este Readme](https://github.com/othneildrew/Best-README-Template)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
