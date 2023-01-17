@@ -39,39 +39,39 @@
 	<div align="left">
 		<h4><a href="#bashscripts">Scripts de bash</a></h4>
 		<ol>
-			<li>[btbr-comienzo.sh](https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
-			<li>[btbr-final.sh](https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
-			<li>[monitoring.sh](https://github.com/violetax/42born2broot/blob/main/monitoring.sh)</li>
-			<li>[algunos_comandos_virtualbox.sh](https://github.com/violetax/42born2broot/blob/main/algunos_comandos_virtualbox.sh)</li>
-			<li>[sobre_lvm_y_contrasenia_encriptada.sh](https://github.com/violetax/42born2broot/blob/main/sobre_lvm_y_contrasenia_encriptada.sh)
+			<li> btbr-comienzo.sh (https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
+			<li> btbr-final.sh (https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
+			<li> monitoring.sh (https://github.com/violetax/42born2broot/blob/main/monitoring.sh)</li>
+			<li> algunos_comandos_virtualbox.sh (https://github.com/violetax/42born2broot/blob/main/algunos_comandos_virtualbox.sh)</li>
+			<li> sobre_lvm_y_contrasenia_encriptada.sh (https://github.com/violetax/42born2broot/blob/main/sobre_lvm_y_contrasenia_encriptada.sh)
 		</ol>
 	</div>
 	<div align="left">
 		<h4><a href="#bashfunciones">Funciones: auxiliares de bash</a></h4>
 		<ol>
-			<li>[Opte.fu](https://github.com/violetax/42born2broot/blob/main/Opte.fu)</li>
-			<li>[Continua.fu](https://github.com/violetax/42born2broot/blob/main/Continua.fu)</li>
+			<li> Opte.fu (https://github.com/violetax/42born2broot/blob/main/Opte.fu)</li>
+			<li> Continua.fu (https://github.com/violetax/42born2broot/blob/main/Continua.fu)</li>
 		</ol>
 	</div>
 	<div align="left">
 		<h4><a href="#configbash">Archivos de configuración de bash</a></h4>
 		<ol>
-			<li>[.bashrc](https://github.com/violetax/42born2broot/blob/main/.bashrc)</li>
-			<li>[.bash_aliases](https://github.com/violetax/42born2broot/blob/main/.bash_aliases)</li>
-			<li>[.dircolors](https://github.com/violetax/42born2broot/blob/main/.dircolors)</li>
+			<li> .bashrc (https://github.com/violetax/42born2broot/blob/main/.bashrc)</li>
+			<li> .bash_aliases (https://github.com/violetax/42born2broot/blob/main/.bash_aliases)</li>
+			<li> .dircolors (https://github.com/violetax/42born2broot/blob/main/.dircolors)</li>
 		</ol>
 	</div>
 	<div align="left">
 		<h4><a href="#configvim">Archivos de configuración de vim</a></h4>
 		<ol>
-			<li>[.vimrc](https://github.com/violetax/42born2broot/blob/main/.vimrc)</li>
+			<li> .vimrc (https://github.com/violetax/42born2broot/blob/main/.vimrc)</li>
 		</ol>
 	</div>
 	<div align="left">
 		<h4><a href="#vimdir">Directorio de vim</a></h4>
 		<ul>
-			<li>[Directorio de archivos con contenido de texto, para la funcionalidad: insert](https://github.com/violetax/42born2broot/tree/main/.vim/sourceText)</li>
-			<li>[Directorio de archivos tipo vim, con funcionalidad de sintaxis](https://github.com/violetax/42born2broot/tree/main/.vim/plugin)</li>
+			<li> Directorio de archivos con contenido de texto, para la funcionalidad: insert (https://github.com/violetax/42born2broot/tree/main/.vim/sourceText)</li>
+			<li> Directorio de archivos tipo vim, con funcionalidad de sintaxis (https://github.com/violetax/42born2broot/tree/main/.vim/plugin)</li>
 		</ul>
 	</div>
 	<div align="left">
