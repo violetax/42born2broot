@@ -36,8 +36,8 @@
 <!-- TABLE OF CONTENTS -->
 <details>
 	<summary>Archivos contenidos</summary>
-		<h4><a href="#bashscripts">Scripts de bash</a></h4>
 	<div align="left">
+		<h4><a href="#bashscripts">Scripts de bash</a></h4>
 		<ol>
 			<li>[btbr-comienzo.sh](https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
 			<li>[btbr-final.sh](https://github.com/violetax/42born2broot/blob/main/btbr-comienzo.sh)</li>
