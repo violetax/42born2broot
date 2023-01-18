@@ -179,11 +179,11 @@ echo -e '
 #	\033[38;5;11ma)\033[38;5;118m El \033[38;5;208m.vimrc \033[38;5;118m incluye AUTOCOMANDOS PARA MACHACAR LOS ARCHIVOS DEL USUARIO milogin42, cuando se cambien en /root   
 \033[38;5;45m# machacar con un autocomando, es un mecanismo facil y muy malo para usar la misma configuracion en varios users, y con posibles \033[38;5;9magujeros de seguridad \033[38;5;45m 
 # \033[38;5;11mb) \033[38;5;118m AQUI se utiliza la herramienta \033[38;5;208m acl\033[38;5;45m : en la configuracion de .bashrc, la variable PROMPT_COMMAND guarda \033[38;5;9mCADA COMANDO \033[38;5;45men sendos archivos del directorio /usr/local/share/historylogs.
-Ese directorio y sus archivos son territorio exclusivo de root, pero con acl se puede conceder permiso de escritura a archivos concretos, a l directorio entero: \033[38;5;11m'
+Ese directorio y sus archivos son territorio exclusivo de root, pero con acl se puede conceder permiso de escritura a archivos concretos: \033[38;5;11m'
 
 set -x
-[[ ${ejecutarcomandos} == true ]] && setfacl -m u:${milogin42}:rwx /usr/local/share/historylogs || awk -v lineno=$LINENO '{ if ( NR == lineno ) print }' $0
-#[[ ${ejecutarcomandos} == true ]] && setfacl -m u:${milogin42}:rw /usr/local/share/historylogs/bash_*  || awk -v lineno=$LINENO '{ if ( NR == lineno ) print }' $0
+[[ ${ejecutarcomandos} == true ]] && setfacl -m u:${milogin42}:rw /usr/local/share/historylogs/a_persistent_history || awk -v lineno=$LINENO '{ if ( NR == lineno ) print }' $0
+[[ ${ejecutarcomandos} == true ]] && setfacl -m u:${milogin42}:rw /usr/local/share/historylogs/bash_*  || awk -v lineno=$LINENO '{ if ( NR == lineno ) print }' $0
 set +x
 
 echo -e '\033[38;5;45m
